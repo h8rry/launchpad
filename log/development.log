@@ -1649,3 +1649,124 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 13:45:48 -0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:31:17 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 14:31:18 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 14:31:18 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 14:31:18 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 14:31:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 14:31:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 14:31:18 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:35:40 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to http://localhost:3000google.ca
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:35:41 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to http://localhost:3000google.ca
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:35:42 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to http://localhost:3000google.ca
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:35:48 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to http://localhost:3000www.google.ca
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:35:50 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to http://localhost:3000www.google.ca
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:35:51 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to http://localhost:3000www.google.ca
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:36:02 -0700
+Connecting to database specified by database.yml
+Processing by StaticPagesController#home as HTML
+Redirected to http://localhost:3000www.google.ca
+Completed 302 Found in 34ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:36:12 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to http://www.google.ca
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:36:27 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to https://graph.facebook.com/oauth/access_token?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb&client_secret=e218f0abdb012a0fc8c49e135b8af61d&code=
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:36:41 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 14:36:41 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 14:36:41 -0700
+Served asset /static_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 14:36:41 -0700
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 14:36:41 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 14:36:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 14:36:41 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 14:40:55 -0700
+Processing by StaticPagesController#home as HTML
+Redirected to https://graph.facebook.com/oauth/access_token?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb&client_secret=e218f0abdb012a0fc8c49e135b8af61d&code=AQAI9FAkleAIB3aa4niEcqu6wMcxIKTa9_CGbNGlSokqK2NcjDESs_Y7PYo9wuwlpBzHfSjANaq8sqNTsIDFa3AlIA6sd1zAqLTVDtPbH11TMJ2uXQo63MZVnyx9NZx0hf85V9yj8C6574k1KXv8_BGLU-V9PRVlBPMxbNU9Monmc8l3sbpIgzZ_HtdGqdjd-gXZq0PAMlOJgzwYphAFd3SF0xE4sWQZtztt2vENxKzKWxbn-09nlBDwndgRaeWllx-5Knc9aM8bZU1IeOYd_5NlUOTP6Ye3CHJ7MaztzyRSU8cRgWq0MscAGhLtaYBvaXc#_=_
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
