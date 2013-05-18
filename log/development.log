@@ -205,3 +205,216 @@ Migrating to CreateUsers (20130518182352)
   [1m[35m (0.6ms)[0m  commit transaction
   [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
 Connecting to database specified by database.yml
+
+
+Started GET "/?error=access_denied&error_code=200&error_description=Permissions+error&error_reason=user_denied" for 127.0.0.1 at 2013-05-18 11:41:17 -0700
+Connecting to database specified by database.yml
+Processing by StaticPagesController#home as HTML
+  Parameters: {"error"=>"access_denied", "error_code"=>"200", "error_description"=>"Permissions error", "error_reason"=>"user_denied"}
+  Rendered static_pages/home.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 11:41:18 -0700
+Served asset /static_pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 11:41:18 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:18 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:18 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:18 -0700
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/?code=AQCzS_CbCGpGI1rPQZBp1VOv6p__BdHGvqkswmxLY2x7F9hEtgdRunStNxiPlj9WV37jAcVSjUR_Q6iBhRfDwX8BObWe2gnhfrMwu7x_BPZ-x_cqaHcmevOESgqYBdXSTRGVtvzxcvtBxnbW3FwiIhgRg1y4dadrZ8kHCtGaeJLJpoEjY4lwHADQPmg9gOWxNn_JfT0AvYGnu_t77RFsslSiyu6AH2y1Z-amuAO2uOx2BOMfKmP9iPXJmyJ-mB4uHb0KraxGThcTnTgdQ1_6kLuImfX1jl-hE4PMVNgzWdJ6OvQiqT0CVZP78PTwoKop85U" for 127.0.0.1 at 2013-05-18 11:41:45 -0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"code"=>"AQCzS_CbCGpGI1rPQZBp1VOv6p__BdHGvqkswmxLY2x7F9hEtgdRunStNxiPlj9WV37jAcVSjUR_Q6iBhRfDwX8BObWe2gnhfrMwu7x_BPZ-x_cqaHcmevOESgqYBdXSTRGVtvzxcvtBxnbW3FwiIhgRg1y4dadrZ8kHCtGaeJLJpoEjY4lwHADQPmg9gOWxNn_JfT0AvYGnu_t77RFsslSiyu6AH2y1Z-amuAO2uOx2BOMfKmP9iPXJmyJ-mB4uHb0KraxGThcTnTgdQ1_6kLuImfX1jl-hE4PMVNgzWdJ6OvQiqT0CVZP78PTwoKop85U"}
+  Rendered static_pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 11:41:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:45 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 11:41:45 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 11:41:46 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/?code=AQALwc-r8OQ4JR0byfTUvRfP7P7HJTF-8mDmtwxnxW8YtmH1b1xmCSVQ-dezp64UsW_gLiiH-gNRNfH6KzbyXWhLHuogOcQg6VNJIioFxC_SiCiwkN5ZVFEIzg3xn2pToDUW35NVYEa3zWmj6TfF9bFrpIp-dGBg9Ot3eGDWvk1_9FdmFo4s5u9ySxOuRpKMLFWlkeKYAzNcOKZxg_3yCa8sT8QJXxWzHZt2WqP0YGz7-wMw_KLlQoyV0xNpseZG_eevN3iD_AABBHVFdJoJt9UwKjspjpwUhNSZTfLuzOT1_ZaLKwH_MykSCowMJkAvJYk" for 127.0.0.1 at 2013-05-18 11:47:23 -0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"code"=>"AQALwc-r8OQ4JR0byfTUvRfP7P7HJTF-8mDmtwxnxW8YtmH1b1xmCSVQ-dezp64UsW_gLiiH-gNRNfH6KzbyXWhLHuogOcQg6VNJIioFxC_SiCiwkN5ZVFEIzg3xn2pToDUW35NVYEa3zWmj6TfF9bFrpIp-dGBg9Ot3eGDWvk1_9FdmFo4s5u9ySxOuRpKMLFWlkeKYAzNcOKZxg_3yCa8sT8QJXxWzHZt2WqP0YGz7-wMw_KLlQoyV0xNpseZG_eevN3iD_AABBHVFdJoJt9UwKjspjpwUhNSZTfLuzOT1_ZaLKwH_MykSCowMJkAvJYk"}
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 11:47:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 11:47:23 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 11:47:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 11:47:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 11:47:23 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 11:47:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-18 11:53:14 -0700
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 11:53:14 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:14 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:14 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 11:53:14 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:14 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:14 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/?code=AQDKjjuGK0UFW7PNEX1rgiQ2N8qe3yMvPFyLc9CyBy2a9h785PaTR5g_de-3R1fD9CeVCwky2PAaXQKlYTdCFnxVCwzsjr3RVSEb5wJeg10D3XISu6LDonUR_AE53M4rUkCWzTGOpjrDJPVsiPGMagwYtx3IL-8quHYHGfG1dSagQqRpatbnb8Xym8q202aAdPOTrOkWR6cMr4-1pvYW88JaxlMbRgEAgEwcwtfKS5eqIS-AxwnstMN07bs1I68vkDyROE3Zpv0q-R7YHTiRQ12qhVvb4OVrE7HOyld5puouPqxh9tgs_sxhWY-JMjuINZk" for 127.0.0.1 at 2013-05-18 11:53:30 -0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"code"=>"AQDKjjuGK0UFW7PNEX1rgiQ2N8qe3yMvPFyLc9CyBy2a9h785PaTR5g_de-3R1fD9CeVCwky2PAaXQKlYTdCFnxVCwzsjr3RVSEb5wJeg10D3XISu6LDonUR_AE53M4rUkCWzTGOpjrDJPVsiPGMagwYtx3IL-8quHYHGfG1dSagQqRpatbnb8Xym8q202aAdPOTrOkWR6cMr4-1pvYW88JaxlMbRgEAgEwcwtfKS5eqIS-AxwnstMN07bs1I68vkDyROE3Zpv0q-R7YHTiRQ12qhVvb4OVrE7HOyld5puouPqxh9tgs_sxhWY-JMjuINZk"}
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 11:53:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:30 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 11:53:30 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:30 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/?code=AQAozX6DipoOL0hSOjqlWP0offinxiLheOCsZ76t7bXChAsJlwK-HFzDweGJGcKvpVOiYRI8qgM27bIykR-St9J8yJeqEawHqJykAMJ3dO6Erc0ZGFAf2EHsqsj6Yf7rNs5QIQrNAgQ8_mgWog-3znc1cGlFT-kptZZenmeEb7RhsPCKpptoxwRbHNzJFZSbcOFIB_yDjjnrsWpeZ7nkfOSQz0uFVD8gAhg6BVJhxV6xjHlodhFdIzo7dpn1limRdcMgQgDaOfcRH5Zveqxdc-SULD4k8_KQkrXrA5mQ2Ua5IbDb7qC2Shpl_tURGIxEpiI" for 127.0.0.1 at 2013-05-18 11:53:32 -0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"code"=>"AQAozX6DipoOL0hSOjqlWP0offinxiLheOCsZ76t7bXChAsJlwK-HFzDweGJGcKvpVOiYRI8qgM27bIykR-St9J8yJeqEawHqJykAMJ3dO6Erc0ZGFAf2EHsqsj6Yf7rNs5QIQrNAgQ8_mgWog-3znc1cGlFT-kptZZenmeEb7RhsPCKpptoxwRbHNzJFZSbcOFIB_yDjjnrsWpeZ7nkfOSQz0uFVD8gAhg6BVJhxV6xjHlodhFdIzo7dpn1limRdcMgQgDaOfcRH5Zveqxdc-SULD4k8_KQkrXrA5mQ2Ua5IbDb7qC2Shpl_tURGIxEpiI"}
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 11:53:32 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 11:53:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:32 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 11:53:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/?code=AQDdUL1wHi7k6IJtCD7qxBlq8-svFGChPqDXqkBtzGCiUfDbNT_6q8QzfM2rjJwuYLsXcI-gDAgufhLa9Jo91TZ62rDascZ1VJulDwIDu5bRwEiHAn-7OsKB9QMHrwPUOJ15i2zy9zfL_C63yOMmFArwVY6l-sJiaSmagAT7EMTZt9AWagKLcYZ6-UbWMjoBGyEzNd7L1CmefKR870nUrIDMHhSXBKzAVm6ti1PPEIySy15Azb5Kl3LRX6ouR25EM5vad0OidXEMsE6GMh-q2mMVyMbErrfA6VqmGvlhcJLbLmTEthQLJeVXwvh_DPeEbsU" for 127.0.0.1 at 2013-05-18 11:56:00 -0700
+Processing by StaticPagesController#home as HTML
+  Parameters: {"code"=>"AQDdUL1wHi7k6IJtCD7qxBlq8-svFGChPqDXqkBtzGCiUfDbNT_6q8QzfM2rjJwuYLsXcI-gDAgufhLa9Jo91TZ62rDascZ1VJulDwIDu5bRwEiHAn-7OsKB9QMHrwPUOJ15i2zy9zfL_C63yOMmFArwVY6l-sJiaSmagAT7EMTZt9AWagKLcYZ6-UbWMjoBGyEzNd7L1CmefKR870nUrIDMHhSXBKzAVm6ti1PPEIySy15Azb5Kl3LRX6ouR25EM5vad0OidXEMsE6GMh-q2mMVyMbErrfA6VqmGvlhcJLbLmTEthQLJeVXwvh_DPeEbsU"}
+  Rendered static_pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-18 11:56:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-05-18 11:56:00 -0700
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 11:56:00 -0700
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-18 11:56:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-18 11:56:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-18 11:56:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
