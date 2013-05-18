@@ -22,7 +22,9 @@ class StaticPagesController < ApplicationController
 		require "net/https"
 		require "uri"
 
-		url = "https://graph.facebook.com/oauth/access_token?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb&client_secret=e218f0abdb012a0fc8c49e135b8af61d&code=" + params[:code]
+		code = params[:code]
+
+		url = "https://graph.facebook.com/oauth/access_token?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb&client_secret=e218f0abdb012a0fc8c49e135b8af61d&code=#{code}"
 
 		uri = URI.parse(url)
 		http = Net::HTTP.new(uri.host, uri.port)
