@@ -5,21 +5,26 @@ class StaticPagesController < ApplicationController
 
 	def fb
 
-		
+
 		require "net/https"
 		require "uri"
 
 		code = params[:code]
 
-		url = "https://graph.facebook.com/oauth/access_token?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb/&client_secret=e218f0abdb012a0fc8c49e135b8af61d&code=#{code}"
+		token_request = "https://graph.facebook.com/oauth/access_token?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb/&client_secret=e218f0abdb012a0fc8c49e135b8af61d&code=#{code}"
 
-		uri = URI.parse(url)
+		uri = URI.parse(token_request)
 		http = Net::HTTP.new(uri.host, uri.port)
 		http.use_ssl = true
 		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 		request = Net::HTTP::Get.new(uri.request_uri)
-		@response = http.request(request)
+		token = http.request(request)
+
+
+		
+
+		info_request = "https://graph.facebook.com/me?fields=id,name,email&access_token=#{token}" 
 
 	end
 end
