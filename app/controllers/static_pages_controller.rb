@@ -3,8 +3,6 @@ class StaticPagesController < ApplicationController
 
 		require "open-uri"
 		require 'net/http'
-
-
 	end
 
 	def fb
