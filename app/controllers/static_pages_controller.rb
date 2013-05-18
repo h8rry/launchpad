@@ -19,12 +19,18 @@ class StaticPagesController < ApplicationController
 		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 		request = Net::HTTP::Get.new(uri.request_uri)
-		token = http.request(request)
+		token = http.request(request).body
 
-
-		
 
 		info_request = "https://graph.facebook.com/me?fields=id,name,email&access_token=#{token}" 
+
+		uri = URI.parse(info_request)
+		http = Net::HTTP.new(uri.host, uri.port)
+		http.use_ssl = true
+		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+		request = Net::HTTP::Get.new(uri.request_uri)
+		@info = http.request(request)
 
 	end
 end
