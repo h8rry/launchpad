@@ -1,10 +1,14 @@
 var launchpad = (function () {
 
   return function (elementId) {
-	var element = !elementId ? $('body') : $('#' + elementId);
+    if(!elementId) {
+        log("elementId not provided");
+        return;
+    }
+	var element = $('#' + elementId);
 	init(element);
   };
-  
+
   function init(element) {
 	var callbackUrl = "http://launchp.herokuapp.com/dev/userCallback";
   
@@ -17,7 +21,7 @@ var launchpad = (function () {
 	footer.html('<small>Learn more</small>');
 
 	var fbButton = $('<button/>').addClass('launchpad-facebook').html('Facebook'),
-		twButton = $('<button/>').addClass('launchpad-twitter').html('Twiiter'),
+		liButton = $('<button/>').addClass('launchpad-linkedin').html('LinkedIn'),
 		ghButton = $('<button/>').addClass('launchpad-github').html('GitHub');
 		
 
@@ -25,8 +29,8 @@ var launchpad = (function () {
 		window.location = 'http://launchp.herokuapp.com/dev/facebook?return_url=' + callbackUrl;
 	});
 
-	twButton.on('click', function() {
-        alert('Yolo');
+	liButton.on('click', function() {
+        window.location = 'http://launchp.herokuapp.com/linkedin/index?return_url=' + callbackUrl;
 	});
 
     ghButton.on('click', function() {
@@ -34,7 +38,7 @@ var launchpad = (function () {
 	});
 
 	body.append(fbButton);
-	body.append(twButton);
+	body.append(liButton);
 	body.append(ghButton);
 
 	wrapper.append(header);
@@ -42,6 +46,10 @@ var launchpad = (function () {
 	wrapper.append(footer);
 
 	element.html(wrapper);
+  }
+
+  function log(message) {
+      console.log("LaunchPad: " + message);
   }
 
 })();

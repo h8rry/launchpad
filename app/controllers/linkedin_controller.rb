@@ -27,7 +27,7 @@ class LinkedinController < ApplicationController
   end
 
   def getUser(token)
-    url = "https://api.linkedin.com/v1/people/~?oauth2_access_token=#{token}"
+    url = "https://api.linkedin.com/v1/people/~?oauth2_access_token=#{token}:(first-name,last-name,public-profile-url,picture-url,email-address)"
     DevController.makeHttpsGetRequest url
   end
 
