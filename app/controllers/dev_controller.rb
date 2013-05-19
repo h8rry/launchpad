@@ -10,7 +10,8 @@ class DevController < ApplicationController
 		#TODO: validation (code) and (callback_url)
 
 		# Exchange code for an access token
-		url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{@@fb_redirect_url}"
+		redir_uri = getFbRedirectUri callback_url
+		url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{redir_uri}"
 		token = makeHttpsGetRequest url
 		
 		puts token
@@ -27,7 +28,7 @@ class DevController < ApplicationController
 	# Redirect to Facebook sign up/in page with our credentials.
 	# Reponse url: our url to handle Facebook's callback
 	def facebook
-		redir_uri = @@fb_redirect_url + "?callback_url=#{params[:return_url]}"
+		redir_uri = getFbRedirectUri params[:return_url]
 		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}"
 		redirect_to url
 	end
@@ -60,6 +61,11 @@ class DevController < ApplicationController
 		require 'json'
 		json = JSON.parse data
 		json["name"]
+	end
+	
+	private
+	def getFbRedirectUri(callback_url)
+		@@fb_redirect_url + "?callback_url=#{callback_url}"
 	end
 	
 end
