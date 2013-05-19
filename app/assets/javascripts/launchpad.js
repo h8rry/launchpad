@@ -26,7 +26,7 @@ var launchpad = (function () {
 		
 
 	fbButton.on('click', function() {
-		window.location = 'http://launchp.herokuapp.com/dev/facebook?return_url=' + callbackUrl;
+		window.location = 'http://launchp.herokuapp.com/facebook/index?return_url=' + callbackUrl;
 	});
 
 	liButton.on('click', function() {
