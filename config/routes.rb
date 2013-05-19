@@ -22,5 +22,8 @@ Launchpad::Application.routes.draw do
 
 
   match '/tw', to: 'static_pages#tw'
+  match '/policy', to: 'static_pages#policy'
+  match '/tos', to: 'static_pages#tos'
+  match '/support', to: 'static_pages#support'
   
 end
