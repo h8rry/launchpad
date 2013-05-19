@@ -1,16 +1,15 @@
 var launchpad = (function () {
 
-  return function (elementId) {
-    if(!elementId) {
-        log("elementId not provided");
+  return function (elementId, callbackUrl) {
+    if(!elementId || !callbackUrl) {
+        log("elementId or callbackUrl not provided");
         return;
     }
 	var element = $('#' + elementId);
-	init(element);
+	init(element, callbackUrl);
   };
 
-  function init(element) {
-	var callbackUrl = "http://launchp.herokuapp.com/dev/userCallback";
+  function init(element, callbackUrl) {
   
 	var wrapper = $('<div/>').addClass('launchpad-wrapper'),
 		header = $('<div/>').addClass('launchpad-header'),
@@ -18,7 +17,7 @@ var launchpad = (function () {
 		footer = $('<div/>').addClass('launchpad-footer');
 
 	header.html('<h3 class="launchpad-header-text">Sign up/in with</h3>');
-	footer.html('<small>By Launchpad API. <a href="">Our Policy and Support</a></small>');
+	footer.html('<small>By <a href="http://launchp.herokuapp.com/" target="_blank">LaunchPad API</a></small>');
 
 	var fbButton = $('<button/>').addClass('launchpad-facebook').html('Facebook'),
 		liButton = $('<button/>').addClass('launchpad-linkedin').html('LinkedIn'),
