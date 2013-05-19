@@ -24,6 +24,11 @@
     text-align: center;
     padding-bottom: 6px;
 }
+
+.launchpad-body button {
+    margin: 5px;
+}
+
 .launchpad-footer {
     text-align: right;
     padding: 0 10px;
@@ -60,12 +65,13 @@
 
     <h1 style="font-size:45px; text-align:center;">Developers! We provide you a <span class="und">simple API</span> for <span class="und">many social oauth APIs</span>:</h1>
 
-    <h1 style="text-align:center;">LaunchPad API</h1>
-
     <br/>
+    <h1 style="color: #EC0808; text-align:center;">LaunchPad API</h1>
+
+    <br/><br/>
     <h2>What is Launchpad API?</h2>
     <p>
-      LaunchPad API is a JavaScript plugin that allows websites to integrate social sign-ins in less than 5 minutes. <br/>
+      LaunchPad API is a service that allows websites to integrate social sign-ins in less than 5 minutes. <br/>
       Developers tend to spend a lot of time (and money) reading and implementing OAuth API documentations for various social platforms
       such as Facebook, Twitter, GitHub, LinkedIn, Google, etc. <br/>
       We know the pain of reading OAuth API documents, so we made it easy for you <br/>
@@ -77,9 +83,10 @@
 
   <div id="launchpad"></div>
 
+  <br/>
   <h2>Usage</h2>
 
-    <h3 style="font-weight: normal">1. Place an empty <code>&lt;div&gt;</code> to where you want for LaunchPad to be located</h3>
+    <h3 style="font-weight: normal">1. Place an empty <code>&lt;div&gt;</code> to wherever you want the LaunchPad to be located</h3>
 
     <pre class="prettyprint linenums" style="width:auto;"><ol class="linenums"><li class="L0"><span class="tag">&lt;body</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0">    <span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"launchpad"</span><span class="tag">&gt;</span><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;/body</span><span class="tag">&gt;</span></li></ol></pre>
 
@@ -141,6 +148,10 @@ $('document').ready(function(){
     }, 5000);
 
     launchpad("launchpad", "http://launchp.herokuapp.com/dev/userCallback");
+
+    $(".launchpad-facebook").addClass("btn btn-primary")
+    $(".launchpad-linkedin").addClass("btn btn-info")
+    $(".launchpad-github").addClass("btn")
 });
 </script>
 

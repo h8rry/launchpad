@@ -17,7 +17,7 @@ var launchpad = (function () {
 		footer = $('<div/>').addClass('launchpad-footer');
 
 	header.html('<h3 class="launchpad-header-text">Sign up/in with</h3>');
-	footer.html('<small>By <a href="http://launchp.herokuapp.com/" target="_blank">LaunchPad API</a></small>');
+	footer.html('<small>by <a href="http://launchp.herokuapp.com/" target="_blank">LaunchPad</a></small>');
 
 	var fbButton = $('<button/>').addClass('launchpad-facebook').html('Facebook'),
 		liButton = $('<button/>').addClass('launchpad-linkedin').html('LinkedIn'),
