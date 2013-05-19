@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -7,3 +8,14 @@
   </component>
 </project>
 
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/launchpad.iml" filepath="$PROJECT_DIR$/.idea/launchpad.iml" />
+    </modules>
+  </component>
+</project>
+
+>>>>>>> e93aa6ebb116c678f8d315e84fbdad3d34ab6360

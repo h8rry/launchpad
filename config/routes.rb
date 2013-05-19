@@ -19,5 +19,8 @@ Launchpad::Application.routes.draw do
   root to: "static_pages#home"
 
   match '/fb', to: 'static_pages#fb'
+
+
+  match '/tw', to: 'static_pages#tw'
   
 end

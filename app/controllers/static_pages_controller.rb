@@ -5,7 +5,6 @@ class StaticPagesController < ApplicationController
 
 	def fb
 
-
 		require "net/https"
 		require "uri"
 
@@ -34,6 +33,17 @@ class StaticPagesController < ApplicationController
 
 		request = Net::HTTP::Get.new(uri.request_uri)
 		@info = http.request(request)
+
+	end
+
+	def tw
+
+		uri = URI.parse("https://api.twitter.com/oauth/request_token")
+		http = Net::HTTP.new(uri.host, uri.port)
+		http.use_ssl = true
+		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+		request = Net::HTTP::Get.new(uri.request_uri)
+		@response = http.request(request)	
 
 	end
 end
