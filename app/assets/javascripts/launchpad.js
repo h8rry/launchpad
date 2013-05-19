@@ -17,8 +17,8 @@ var launchpad = (function () {
 	footer.html('<small>Learn more</small>');
 
 	var fbButton = $('<button/>').addClass('launchpad-facebook').html('Facebook'),
-		twButton = $('<button/>').html('Twiiter'),
-		googButton = $('<button/>').html('Google');
+		twButton = $('<button/>').addClass('launchpad-twitter').html('Twiiter'),
+		ghButton = $('<button/>').addClass('launchpad-github').html('GitHub');
 		
 
 	fbButton.on('click', function() {
@@ -26,16 +26,16 @@ var launchpad = (function () {
 	});
 
 	twButton.on('click', function() {
-		alert('yolo');
+        alert('Yolo');
 	});
 
-	googButton.on('click', function() {
-		alert('yolo');
+    ghButton.on('click', function() {
+        window.location = 'http://launchp.herokuapp.com/github/index?return_url=' + callbackUrl;
 	});
 
 	body.append(fbButton);
 	body.append(twButton);
-	body.append(googButton);
+	body.append(ghButton);
 
 	wrapper.append(header);
 	wrapper.append(body);

@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9522d58-cee8-48fa-bd31-b0602287220e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/github_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/github_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/launchpad.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/launchpad.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/github/resp.html.erb" afterPath="$PROJECT_DIR$/app/views/github/resp.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="launchpad.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368944791821" ignored="false" />
     <file path="/dev_controller.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368951462941" ignored="false" />
-    <file path="/routes.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368949618727" ignored="false" />
+    <file path="/routes.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368955383651" ignored="false" />
     <file path="/twitter_controller.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368948330961" ignored="false" />
     <file path="/index.html.erb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368948365650" ignored="false" />
     <file path="/github_controller.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368952957916" ignored="false" />
-    <file path="/resp.html.erb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368951043155" ignored="false" />
+    <file path="/resp.html.erb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368955120276" ignored="false" />
     <file path="/temp.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368950747551" ignored="false" />
+    <file path="/launchpad.js" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368953350177" ignored="false" />
+    <file path="/linkedin_controller.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368955127716" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +48,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="github_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="github_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/github_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="51" selection-start="936" selection-end="936" vertical-scroll-proportion="0.7380952">
+            <state line="13" column="0" selection-start="408" selection-end="466" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="launchpad.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/launchpad.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="73" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="linkedin_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/linkedin_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="24" selection-start="521" selection-end="521" vertical-scroll-proportion="0.33951497">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="resp.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/github/resp.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/linkedin/resp.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.0">
+            <state line="1" column="10" selection-start="34" selection-end="34" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
@@ -63,7 +87,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="18" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+            <state line="12" column="23" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,10 +120,13 @@
         <option value="$PROJECT_DIR$/app/controllers/github.rb" />
         <option value="$PROJECT_DIR$/app/views/twitter/resp.html.erb" />
         <option value="$PROJECT_DIR$/app/views/github/index.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/github/resp.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/dev_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/github_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/launchpad.js" />
+        <option value="$PROJECT_DIR$/app/views/github/resp.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/linkedin/resp.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/linkedin_controller.rb" />
       </list>
     </option>
   </component>
@@ -211,6 +238,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="linkedin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launchpad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launchpad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -266,6 +315,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launchpad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launchpad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launchpad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launchpad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -613,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/launchpad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="79" selection-start="843" selection-end="853" vertical-scroll-proportion="0.5714286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/twitter_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="120" selection-end="530" vertical-scroll-proportion="0.0952381">
@@ -641,20 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/github/resp.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dev_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="47" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0">
@@ -662,9 +730,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/github.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/static_pages.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/launchpad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="73" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/github_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="51" selection-start="936" selection-end="936" vertical-scroll-proportion="0.7380952">
+        <state line="13" column="0" selection-start="408" selection-end="466" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/github/resp.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/linkedin/resp.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="10" selection-start="34" selection-end="34" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/linkedin_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="24" selection-start="521" selection-end="521" vertical-scroll-proportion="0.33951497">
           <folding />
         </state>
       </provider>
