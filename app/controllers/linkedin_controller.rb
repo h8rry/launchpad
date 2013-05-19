@@ -14,6 +14,13 @@ class LinkedinController < ApplicationController
   def resp
     code = params[:code]
 
-    @user = code
+    token = getToken code
+    @user = token
   end
+
+  def getToken(code)
+    url = "https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&client_id=#{@@app_key}&client_secret=#{@@secret_key}&redirect_uri=#{@@redirect_uri}&code=#{code}"
+    DevController.makeHttpsGetRequest url
+  end
+
 end
