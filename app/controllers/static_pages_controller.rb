@@ -23,7 +23,9 @@ class StaticPagesController < ApplicationController
 
 		temp1 = token.index("access_token")
 		temp2= token.index("expires")
-		token = token[temp1+12..temp2-1]
+		token = token[temp1+12..temp2-2]
+
+		@show = token
 
 		info_request = "https://graph.facebook.com/me?fields=id,name,email&access_token=#{token}" 
 
