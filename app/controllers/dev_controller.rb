@@ -4,7 +4,7 @@ class DevController < ApplicationController
 	@@fb_redirect_url = "http://launchp.herokuapp.com/dev/resp"
 	
 	# TODO: BIG todo
-	@@lol = ""
+	@@callback_url = "http://launchp.herokuapp.com/dev/userCallback"
 
 	def resp
 		code = params[:code]
@@ -22,7 +22,8 @@ class DevController < ApplicationController
 		# Get stuff about the user
 		url = "https://graph.facebook.com/me?access_token=#{token}"
 		data = makeHttpsGetRequest url
-		@result = processUserData data
+		result = processUserData data
+		redirect_to("#{callback_url}?=" + result.to_query)
 	end
 	
 	# Redirect to Facebook sign up/in page with our credentials.
