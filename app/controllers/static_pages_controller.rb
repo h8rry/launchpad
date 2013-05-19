@@ -23,7 +23,7 @@ class StaticPagesController < ApplicationController
 
 		temp1 = token.index("access_token")
 		temp2= token.index("expires")
-		token = token[temp1+12..temp2-2]
+		token = token[temp1+13..temp2-2]
 
 		@show = token
 
