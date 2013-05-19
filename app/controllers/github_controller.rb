@@ -29,7 +29,7 @@ class GithubController < ApplicationController
   end
 
   def getUser(token)
-    url = "https://api.github.com/user?access_toke=#{token}"
+    url = "https://api.github.com/user?access_token=#{token}"
     DevController.makeHttpsGetRequest url
   end
 
