@@ -10,7 +10,7 @@ var launchpad = (function () {
   };
 
   function init(element) {
-	var callbackUrl = "http://launchp.herokuapp.com/dev/userCallback";
+	var callbackUrl = "http://localhost:3000/dev/userCallback";
   
 	var wrapper = $('<div/>').addClass('launchpad-wrapper'),
 		header = $('<div/>').addClass('launchpad-header'),
