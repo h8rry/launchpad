@@ -4,7 +4,7 @@ class FacebookController < ApplicationController
   @@app_id = 191338297661848
   @@app_secret = "e218f0abdb012a0fc8c49e135b8af61d"
   @@redirect_uri = "http://launchp.herokuapp.com/facebook/resp"
-  @@scope = "email,picture.type(large)"
+  @@scope = "email, picture"
 
   # TODO: BIG todo
   @@callback_url = "http://launchp.herokuapp.com/dev/userCallback"
@@ -42,9 +42,16 @@ class FacebookController < ApplicationController
         :name => data['name'],
         :email => data['email'],
         :gender => data['gender'],
-        :picture_url => data['avatar_url'],
+        :picture_url => get_picture_url(data['username']),
         :facebook_url => data['link']
     }
+  end
+
+  def get_picture_url(username)
+    url = "https://graph.facebook.com/#{username}/picture?type=large&redirect=false"
+    data = DevController.makeHttpsGetRequest url
+    data = JSON.parse data
+    picture_url = data['data']['url']
   end
 
 end
