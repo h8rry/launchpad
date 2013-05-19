@@ -15,7 +15,8 @@ class LinkedinController < ApplicationController
   def resp
     code = params[:code]
     token = getToken code
-    @user = getUser token
+    data = getUser token
+    @user = (processUserData data).to_query
   end
 
   def getToken(code)
@@ -29,6 +30,16 @@ class LinkedinController < ApplicationController
     url = "https://api.linkedin.com/v1/people/~:(first-name,last-name,public-profile-url,picture-url,email-address)?oauth2_access_token=#{token}"
     xml = DevController.makeHttpsGetRequest url  #returns XML (I know, wtf LinkedIn?)
     Hash.from_xml(xml).to_json
+  end
+
+  def processUserData(data)
+    data = data["person"]
+    model = {
+        :name => data["first_name"] + " " + data["last_name"],
+        :email => data["email_address"],
+        :picture_url => data["picture_url"],
+        :linkedin_url => data["public_profile_url"]
+    }
   end
 
 end
