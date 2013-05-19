@@ -15,10 +15,11 @@ class GithubController < ApplicationController
     puts "Response code: #{code}"
 
     token = getToken code
-    puts "Token: #{token}"
-    token = token[token.index("access_token")+13, token.index("token_type")-2]
+    @user = token
+    #puts "Token: #{token}"
+    #token = token[token.index("access_token")+13, token.index("token_type")-2]
 
-    @user = getUser token
+    #@user = getUser token
 
   end
 

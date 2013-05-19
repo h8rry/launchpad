@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9522d58-cee8-48fa-bd31-b0602287220e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dev_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/dev_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/github_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/github_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/github/resp.html.erb" afterPath="$PROJECT_DIR$/app/views/github/resp.html.erb" />
     </list>
     <ignored path="launchpad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,7 +11,7 @@
     <file path="/routes.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368949618727" ignored="false" />
     <file path="/twitter_controller.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368948330961" ignored="false" />
     <file path="/index.html.erb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368948365650" ignored="false" />
-    <file path="/github_controller.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368951469974" ignored="false" />
+    <file path="/github_controller.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368951733810" ignored="false" />
     <file path="/resp.html.erb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368951043155" ignored="false" />
     <file path="/temp.rb" changelist="e9522d58-cee8-48fa-bd31-b0602287220e" time="1368950747551" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +47,7 @@
       <file leaf-file-name="github_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/github_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="24" selection-start="867" selection-end="867" vertical-scroll-proportion="0.6666667">
+            <state line="17" column="17" selection-start="513" selection-end="513" vertical-scroll-proportion="0.4047619">
               <folding />
             </state>
           </provider>
@@ -652,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/github/resp.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dev_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="11" selection-start="1676" selection-end="1676" vertical-scroll-proportion="0.0">
@@ -668,9 +659,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/github/resp.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/github_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="24" selection-start="867" selection-end="867" vertical-scroll-proportion="0.6666667">
+        <state line="17" column="17" selection-start="513" selection-end="513" vertical-scroll-proportion="0.4047619">
           <folding />
         </state>
       </provider>
