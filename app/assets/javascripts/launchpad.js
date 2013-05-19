@@ -22,7 +22,7 @@ var launchpad = (function () {
 		
 
 	fbButton.on('click', function() {
-		window.location = 'http://localhost:3000/dev/facebook?return_url=' + callbackUrl;
+		window.location = 'http://launchp.herokuapp.com/dev/facebook?return_url=' + callbackUrl;
 	});
 
 	twButton.on('click', function() {

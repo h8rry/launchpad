@@ -1,8 +1,7 @@
 class DevController < ApplicationController
 	@@app_id = 191338297661848
 	@@app_secret = "e218f0abdb012a0fc8c49e135b8af61d"
-	#@@fb_redirect_url = "http://launchp.herokuapp.com/dev/resp"
-	@@fb_redirect_url = "http://localhost:3000/dev/resp"
+	@@fb_redirect_url = "http://launchp.herokuapp.com/dev/resp"
 	
 	# TODO: BIG todo
 	@@lol = ""
