@@ -5,7 +5,9 @@ class DevController < ApplicationController
 
 	def resp
 		code = params[:code]
-		#TODO: validation (code)
+		callback_url = params[:callback_url]
+		puts "Website callback: #{callback_url}"
+		#TODO: validation (code) and (callback_url)
 
 		# Exchange code for an access token
 		url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{@@fb_redirect_url}"
@@ -25,7 +27,8 @@ class DevController < ApplicationController
 	# Redirect to Facebook sign up/in page with our credentials.
 	# Reponse url: our url to handle Facebook's callback
 	def facebook
-		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{@@fb_redirect_url}"
+		redir_uri = @@fb_redirect_url + "?callback_url=#{params[:return_url]}"
+		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}"
 		redirect_to url
 	end
 	
