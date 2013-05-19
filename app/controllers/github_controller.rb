@@ -19,7 +19,7 @@ class GithubController < ApplicationController
     token = getToken(code, callback_url)
     data = getUser token
     pams = (process_userdata data).to_query
-    redirect_to "#{callback_url}?=#{pams}"
+    redirect_to "#{callback_url}?#{pams}"
   end
 
   private

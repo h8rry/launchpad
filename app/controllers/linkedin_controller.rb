@@ -20,7 +20,7 @@ class LinkedinController < ApplicationController
     token = get_token(code, callback_url)
     data = get_user token
     pams = (process_userdata data).to_query
-    redirect_to "#{callback_url}?=#{pams}"
+    redirect_to "#{callback_url}?#{pams}"
   end
 
   private

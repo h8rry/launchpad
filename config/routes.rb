@@ -1,18 +1,14 @@
 Launchpad::Application.routes.draw do
-  get "linkedin/resp"
-
   resources :users
 
-  get "dev/resp"
-
-  get "github/index" #redirect
+  get "github/index"
   get "github/resp"
 
-  get "linkedin/index" #redirect
+  get "linkedin/index"
   get "linkedin/resp"
 
-  get "dev/facebook" #redirect
-  get "dev/user"
+  get "facebook/index"
+  get "facebook/resp"
 
   get "dev/userCallback"
   
@@ -20,7 +16,5 @@ Launchpad::Application.routes.draw do
 
   match '/fb', to: 'static_pages#fb'
 
-
   match '/tw', to: 'static_pages#tw'
-  
 end
