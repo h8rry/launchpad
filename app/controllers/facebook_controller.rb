@@ -4,19 +4,19 @@ class FacebookController < ApplicationController
   @@app_id = 191338297661848
   @@app_secret = "e218f0abdb012a0fc8c49e135b8af61d"
   @@redirect_uri = "http://launchp.herokuapp.com/facebook/resp"
-  @@scope = "email"
+  @@scope = "email,picture.type(large)"
 
   # TODO: BIG todo
   @@callback_url = "http://launchp.herokuapp.com/dev/userCallback"
 
   def index
-    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{@@redirect_uri}"
+    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{@@redirect_uri}&scope=#{@@scope}"
     redirect_to url
   end
 
   def resp
     code = params[:code]
-    token = get_token(code, callback_url)
+    token = get_token code
     data = get_user token
     pams = (process_userdata data).to_query
     #redirect_to "#{callback_url}?#{pams}"
@@ -24,8 +24,8 @@ class FacebookController < ApplicationController
   end
 
   private
-  def get_token(code, callback_url)
-    redir_uri = get_request_uri callback_url
+  def get_token(code)
+    redir_uri = @@redirect_uri
     url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{redir_uri}"
     token = DevController.makeHttpsGetRequest url
     token[token.index("access_token")+13, token.index("expires")-2]
@@ -41,14 +41,10 @@ class FacebookController < ApplicationController
     model = {
         :name => data['name'],
         :email => data['email'],
+        :gender => data['gender'],
         :picture_url => data['avatar_url'],
-        :facebook_url => data['html_url']
+        :facebook_url => data['link']
     }
-  end
-
-  def get_request_uri(callback_url)
-    @@redirect_uri + "?callback_url=#{callback_url}"
-    #@@redirect_uri
   end
 
 end

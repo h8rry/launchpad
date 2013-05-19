@@ -1,6 +1,4 @@
 Launchpad::Application.routes.draw do
-  get "linkedin/resp"
-
   resources :users
 
   get "github/index"
