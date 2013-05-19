@@ -8,7 +8,7 @@ class DevController < ApplicationController
 
 	def resp
 		code = params[:code]
-		call = params[:callback_url]
+		#call = params[:callback_url]
 		#TODO: validation (code)
 
 		# Exchange code for an access token
@@ -31,7 +31,7 @@ class DevController < ApplicationController
 	# Redirect to Facebook sign up/in page with our credentials.
 	# Reponse url: our url to handle Facebook's callback
 	def facebook
-		call = params[:return_url]
+		#call = params[:return_url]
 		redir_uri = getFbRedirectUri call
 		scope = "email"
 		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{scope}"
@@ -69,8 +69,8 @@ class DevController < ApplicationController
 	end
 	
 	def getFbRedirectUri(callback_url)
-		@@fb_redirect_url + "?callback_url=#{callback_url}"
-		#@@fb_redirect_url
+		#@@fb_redirect_url + "?callback_url=#{callback_url}"
+		@@fb_redirect_url
 	end
 	
 end
