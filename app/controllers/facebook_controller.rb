@@ -10,7 +10,7 @@ class FacebookController < ApplicationController
   @@callback_url = "http://launchp.herokuapp.com/dev/userCallback"
 
   def index
-    #callback_url = params[:return_url]
+    callback_url = params[:return_url]
     redir_uri = get_request_uri callback_url
     url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{@@scope}"
     redirect_to url
@@ -18,7 +18,7 @@ class FacebookController < ApplicationController
 
   def resp
     code = params[:code]
-    #callback_url = params[:callback_url]
+    callback_url = params[:callback_url]
     token = get_token(code, callback_url)
     data = get_user token
     pams = (process_userdata data).to_query
@@ -50,8 +50,8 @@ class FacebookController < ApplicationController
   end
 
   def get_request_uri(callback_url)
-    #@@redirect_uri + "?callback_url=#{callback_url}"
-    @@redirect_uri
+    @@redirect_uri + "?callback_url=#{callback_url}"
+    #@@redirect_uri
   end
 
 end
