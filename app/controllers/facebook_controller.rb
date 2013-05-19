@@ -18,10 +18,9 @@ class FacebookController < ApplicationController
     code = params[:code]
     token = get_token code
     data = get_user token
-    @user = data
-    #pams = (process_userdata data).to_query
+    pams = (process_userdata data).to_query
     #redirect_to "#{callback_url}?#{pams}"
-    #@user = "#{@@callback_url}?#{pams}"
+    @user = "#{@@callback_url}?#{pams}"
   end
 
   private
@@ -42,8 +41,9 @@ class FacebookController < ApplicationController
     model = {
         :name => data['name'],
         :email => data['email'],
+        :gender => data['gender'],
         :picture_url => data['avatar_url'],
-        :facebook_url => data['html_url']
+        :facebook_url => data['link']
     }
   end
 
