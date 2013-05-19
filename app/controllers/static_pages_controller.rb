@@ -25,8 +25,6 @@ class StaticPagesController < ApplicationController
 		temp2= token.index("expires")
 		token = token[temp1+13..temp2-2]
 
-		@show = token
-
 		info_request = "https://graph.facebook.com/me?fields=id,name,email&access_token=#{token}" 
 
 		uri = URI.parse(info_request)
@@ -36,6 +34,8 @@ class StaticPagesController < ApplicationController
 
 		request = Net::HTTP::Get.new(uri.request_uri)
 		@info = http.request(request)
+
+		redirect_to "their site/?name=&email="
 
 	end
 end
