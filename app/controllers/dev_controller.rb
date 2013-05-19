@@ -23,7 +23,7 @@ class DevController < ApplicationController
 		url = "https://graph.facebook.com/me?access_token=#{token}"
 		data = makeHttpsGetRequest url
 		result = processUserData data
-		redirect_to("#{@@lol}?=" + result.to_query)
+		redirect_to @@lol
 	end
 	
 	# Redirect to Facebook sign up/in page with our credentials.
@@ -31,7 +31,8 @@ class DevController < ApplicationController
 	def facebook
 		@@lol = params[:return_url]
 		redir_uri = getFbRedirectUri params[:return_url]
-		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}"
+		scope = "fields=name,picture.width(300).height(300),email"
+		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{scope}"
 		redirect_to url
 	end
 	
@@ -58,15 +59,13 @@ class DevController < ApplicationController
 		http.request(request).body
 	end
 	
-	private
 	def processUserData(data)
 		require 'json'
 		json = JSON.parse data
 		
-		{ name => json["name"], email => json["email"], picture => json["picture"]["data"]["url"]}
+		{ :name => json["name"], :email => json["email"], :picture => json["picture"]["data"]["url"]}
 	end
 	
-	private
 	def getFbRedirectUri(callback_url)
 		#@@fb_redirect_url + "?callback_url=#{callback_url}"
 		@@fb_redirect_url
