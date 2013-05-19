@@ -39,7 +39,7 @@ class StaticPagesController < ApplicationController
 	def tw
 
 		uri = URI.parse("https://api.twitter.com/oauth/request_token")
-		http = Net::HTTP.new(uri.host, uri.port, 'oauth_nonce=K7ny27JTpKVsTgdyLdDfmQQWVLERj2zAK5BslRsqyw&oauth_callback=http%3A%2F%2Fmyapp.com%3A3005%2Ftwitter%2Fprocess_callback&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1300228849&oauth_consumer_key=OqEqJeafRSF11jBMStrZz&oauth_signature=Pc%2BMLdv028fxCErFyi8KXFM%2BddU%3D&oauth_version=1.0')
+		http = Net::HTTP.new(uri.host, uri.port)
 		http.use_ssl = true
 		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 		request = Net::HTTP::Get.new(uri.request_uri)

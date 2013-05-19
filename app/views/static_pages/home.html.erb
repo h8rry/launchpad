@@ -1,9 +1,82 @@
-Our Dialog
-
-<br>
+<script type="text/javascript">
 
 
-<%= link_to "log in using facebook", "https://www.facebook.com/dialog/oauth?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb/" %>
+
+  $('document').ready(function(){
+  	var arr = ["Twitter", "Github", "LinkedIn", "Google", "Facebook"];
+  	var i = 0;
+  	setInterval(function() {
+  			var e = $('#name');
+      
+      		e.html('<div class="changing_field">' + arr[i++] + '</div>' )
+
+      		i = i % 5;
+
+	}, 4000); 
+
+  });
+
+</script>
+
+<style>
+ /**
+ * Typing animation with pure CSS
+ * Revised. Browser support (as of Feb 2012): Firefox, IE10
+ */
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.changing_field { 
+	font: bold 150% Consolas, Monaco, monospace;
+	border-right: .1em solid;
+	width: 8em; /* fallback */
+	width: 8ch; /* # of chars */
+	
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(8, end), /* # of steps = # of chars */
+	           blink-caret 1s step-end infinite alternate;
+}  
+</style>
+	
+<div class="hero-unit">
+	    	<img src="http://imgur.com/ifkeavV.gif" class="rocket" width="130" />
 
 
-<%= link_to "log in using twitter", "https://www.facebook.com/dialog/oauth?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/fb/" %>
+	<h1 style="font-size:80px; text-align:center;"> Launch Pad</h1>
+
+	<br>
+	<br>
+
+	<span class="span5">
+	  <h1>Sign up/in with <div id="name"><div class="changing_field">Facebook</div></div></h1>
+	</span>
+
+  	<span class="span4">
+
+  	<img src="https://blog.twitter.com/sites/all/themes/gazebo/img/twitter-bird-white-on-blue.png" class="img-circle">
+	<img src="http://www.insidefacebook.com/wp-content/uploads/2013/04/facebook-logo-150x150.png" class="img-circle">
+	<img src="http://officialpsds.com/images/thumbs/Google-G-Logo-psd64498.png" class="img-circle">
+
+   </span>
+
+</div>
+
+<span class="span5">
+
+<pre class="prettyprint linenums" style="width:500px;"><ol class="linenums"><li class="L0"><span class="tag">&lt;body</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"lol"</span><span class="tag">&gt;</span><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"../assets/launchpad.js" </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="tag">&lt;/script</span><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><li><span>	launchpad("lol", "http://www.callback_to_your_site.com");</span></li><span class="tag">&lt;/script</span><span class="tag">&gt;</span></li ><li class="L0"><span class="tag">&lt;/body</span><span class="tag">&gt;</span></li></ol></pre>
+
+</span>
+
+<span class="span5">
+<div id="lol"></div>
+</span>
+
+<script src="../assets/launchpad.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	launchpad("lol", "http://www.callback_to_your_site.com");
+</script>
+
+
