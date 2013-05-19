@@ -65,7 +65,8 @@ class DevController < ApplicationController
 	
 	private
 	def getFbRedirectUri(callback_url)
-		@@fb_redirect_url + "?callback_url=#{callback_url}"
+		#@@fb_redirect_url + "?callback_url=#{callback_url}"
+		@@fb_redirect_url
 	end
 	
 end
