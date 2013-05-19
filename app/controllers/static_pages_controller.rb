@@ -21,6 +21,9 @@ class StaticPagesController < ApplicationController
 		request = Net::HTTP::Get.new(uri.request_uri)
 		token = http.request(request).body
 
+		temp1 = token.index("access_token")
+		temp2= token.index("expires")
+		token = token[temp1+12..temp2-1]
 
 		info_request = "https://graph.facebook.com/me?fields=id,name,email&access_token=#{token}" 
 
