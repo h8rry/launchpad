@@ -22,7 +22,7 @@ class DevController < ApplicationController
 		# Get stuff about the user
 		url = "https://graph.facebook.com/me?access_token=#{token}"
 		data = makeHttpsGetRequest url
-		@result = (processUserData(data)).to_query
+		@result = processUserData data
 	end
 	
 	# Redirect to Facebook sign up/in page with our credentials.
@@ -62,7 +62,7 @@ class DevController < ApplicationController
 		require 'json'
 		json = JSON.parse data
 		
-		{ :name => json["name"], :email => json["email"], :picture => json["picture"]["data"]["url"]}
+		{ :name => json["name"], :email => json["email"]}
 	end
 	
 	def getFbRedirectUri(callback_url)
