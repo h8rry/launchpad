@@ -11,21 +11,25 @@ class GithubController < ApplicationController
   end
 
   def resp
-    @code = params[:code]
+    code = params[:code]
+    puts "Response code: #{code}"
+
+    token = getToken code
+    puts "Token: #{token}"
+    token = token[token.index("access_token")+13, token.index("token_type")-2]
+
+    @user = getUser token
 
   end
 
-  def makeHttpsPostRequeset(url)
-    require 'net/http'
-    require 'net/https'
-    require 'uri'
-
-    uri = URI.parse url
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true
-    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    request = Net::HTTP::Post.new(uri.path)
-    http.request(request).body
+  def getToken(code)
+    url = "https://github.com/login/oauth/access_token?client_id=#{@@client_id}&client_secret=#{@@client_secret}&@@redirect_uri=#{@@redirect_uri}&code=#{code}"
+    DevController.makeHttpsPostRequest url
   end
+
+  def getUser(token)
+    url = "https://api.github.com/user?access_toke=#{token}"
+    DevController.makeHttpsGetRequest url
+  end
+
 end

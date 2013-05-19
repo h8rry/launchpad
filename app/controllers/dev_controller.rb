@@ -45,9 +45,8 @@ class DevController < ApplicationController
 	def userCallback
 	
 	end
-	
-	private
-	def makeHttpsGetRequest(url)
+
+	def self.makeHttpsGetRequest(url)
 		require 'net/https'
 		require 'net/http'
 		require 'uri'
@@ -59,9 +58,24 @@ class DevController < ApplicationController
 
 		request = Net::HTTP::Get.new(uri.request_uri)
 		http.request(request).body
-	end
-	
-	def processUserData(data)
+  end
+
+  def self.makeHttpsPostRequest(url)
+    require 'net/http'
+    require 'net/https'
+    require 'uri'
+
+    uri = URI.parse url
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+    request = Net::HTTP::Post.new(uri.path)
+    http.request(request).body
+  end
+
+
+  def processUserData(data)
 		require 'json'
 		json = JSON.parse data
 		
