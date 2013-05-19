@@ -17,8 +17,8 @@ var launchpad = (function () {
 		body = $('<div/>').addClass('launchpad-body'),
 		footer = $('<div/>').addClass('launchpad-footer');
 
-	header.html('<h3 class="launchpad-header-text">LaunchPad</h3>');
-	footer.html('<small>Learn more</small>');
+	header.html('<h3 class="launchpad-header-text">Sign up/in with</h3>');
+	footer.html('<small>By Launchpad API. <a href="">Our Policy and Support</a></small>');
 
 	var fbButton = $('<button/>').addClass('launchpad-facebook').html('Facebook'),
 		liButton = $('<button/>').addClass('launchpad-linkedin').html('LinkedIn'),
