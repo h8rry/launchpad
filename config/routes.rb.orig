@@ -1,6 +1,4 @@
 Launchpad::Application.routes.draw do
-  get "linkedin/resp"
-
   resources :users
 
   get "github/index"
@@ -19,8 +17,11 @@ Launchpad::Application.routes.draw do
   match '/fb', to: 'static_pages#fb'
 
   match '/tw', to: 'static_pages#tw'
+<<<<<<< HEAD
   match '/policy', to: 'static_pages#policy'
   match '/tos', to: 'static_pages#tos'
   match '/support', to: 'static_pages#support'
   
+=======
+>>>>>>> d204b451ec31b2b810bbb035f9dcc08aa53274cb
 end
