@@ -2,19 +2,19 @@ class DevController < ApplicationController
 	@@app_id = 191338297661848
 	@@app_secret = "e218f0abdb012a0fc8c49e135b8af61d"
 	@@fb_redirect_url = "http://launchp.herokuapp.com/dev/resp"
+	
+	# TODO: BIG todo
+	@@lol = ""
 
 	def resp
 		code = params[:code]
 		callback_url = params[:callback_url]
-		puts "Website callback: #{callback_url}"
-		#TODO: validation (code) and (callback_url)
+		#TODO: validation (code)
 
 		# Exchange code for an access token
 		redir_uri = getFbRedirectUri callback_url
 		url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{redir_uri}"
 		token = makeHttpsGetRequest url
-		
-		puts token
 		
 		token = token[token.index("access_token")+13, token.index("expires")-2]
 		#TODO: validation (token)
@@ -22,12 +22,14 @@ class DevController < ApplicationController
 		# Get stuff about the user
 		url = "https://graph.facebook.com/me?access_token=#{token}"
 		data = makeHttpsGetRequest url
-		@result = processUserData data
+		result = processUserData data
+		redirect_to("#{@@lol}?=" + result.to_query)
 	end
 	
 	# Redirect to Facebook sign up/in page with our credentials.
 	# Reponse url: our url to handle Facebook's callback
 	def facebook
+		@@lol = params[:return_url]
 		redir_uri = getFbRedirectUri params[:return_url]
 		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}"
 		redirect_to url
@@ -60,7 +62,8 @@ class DevController < ApplicationController
 	def processUserData(data)
 		require 'json'
 		json = JSON.parse data
-		json["name"]
+		
+		{ name => json["name"], email => json["email"], picture => json["picture"]["data"]["url"]}
 	end
 	
 	private
