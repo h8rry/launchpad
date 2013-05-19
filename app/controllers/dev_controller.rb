@@ -31,7 +31,7 @@ class DevController < ApplicationController
 	def facebook
 		@@lol = params[:return_url]
 		redir_uri = getFbRedirectUri params[:return_url]
-		scope = "fields=name,picture.width(300).height(300),email"
+		scope = "name,picture.width(300).height(300),email"
 		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{scope}"
 		redirect_to url
 	end
