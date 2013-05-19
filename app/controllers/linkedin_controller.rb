@@ -1,4 +1,5 @@
 class LinkedinController < ApplicationController
+  require 'json'
 
   @@app_key = "lb0mu1eenz6v"
   @@secret_key = "5aVToiEvXuUeM4PM"
@@ -18,8 +19,6 @@ class LinkedinController < ApplicationController
   end
 
   def getToken(code)
-    require 'json'
-
     url = "https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&client_id=#{@@app_key}&client_secret=#{@@secret_key}&redirect_uri=#{@@redirect_uri}&code=#{code}"
     token = DevController.makeHttpsGetRequest url
     json = JSON.parse token
@@ -28,7 +27,8 @@ class LinkedinController < ApplicationController
 
   def getUser(token)
     url = "https://api.linkedin.com/v1/people/~:(first-name,last-name,public-profile-url,picture-url,email-address)?oauth2_access_token=#{token}"
-    DevController.makeHttpsGetRequest url
+    xml = DevController.makeHttpsGetRequest url  #returns XML (I know, wtf LinkedIn?)
+    Hash.from_xml(xml).to_json
   end
 
 end
