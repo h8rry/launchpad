@@ -10,12 +10,16 @@ class DevController < ApplicationController
 		# Exchange code for an access token
 		url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{@@fb_redirect_url}"
 		token = makeHttpsGetRequest url
+		
+		puts token
+		
 		token = token[token.index("access_token")+13, token.index("expires")-2]
 		#TODO: validation (token)
 		
 		# Get stuff about the user
 		url = "https://graph.facebook.com/me?access_token=#{token}"
-		@result = makeHttpsGetRequest url		
+		data = makeHttpsGetRequest url
+		@result = processUserData data
 	end
 	
 	# Redirect to Facebook sign up/in page with our credentials.
@@ -39,13 +43,20 @@ class DevController < ApplicationController
 		require 'net/http'
 		require 'uri'
 		
-		uri = URI.parse(url)
+		uri = URI.parse url
 		http = Net::HTTP.new(uri.host, uri.port)
 		http.use_ssl = true
 		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
 		request = Net::HTTP::Get.new(uri.request_uri)
 		http.request(request).body
+	end
+	
+	private
+	def processUserData(data)
+		require 'json'
+		json = JSON.parse data
+		json["name"]
 	end
 	
 end
