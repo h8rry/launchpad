@@ -35,7 +35,5 @@ class StaticPagesController < ApplicationController
 		request = Net::HTTP::Get.new(uri.request_uri)
 		@info = http.request(request)
 
-		redirect_to "their site/?name=&email="
-
 	end
 end
