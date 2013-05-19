@@ -23,7 +23,7 @@ class DevController < ApplicationController
 		url = "https://graph.facebook.com/me?access_token=#{token}"
 		data = makeHttpsGetRequest url
 		result = processUserData data
-		redirect_to("#{callback_url}?data=" + result.to_query)
+		redirect_to("#{callback_url}?" + result.to_query)
 	end
 	
 	# Redirect to Facebook sign up/in page with our credentials.
