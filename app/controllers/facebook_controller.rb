@@ -16,16 +16,17 @@ class FacebookController < ApplicationController
 
   def resp
     code = params[:code]
-    token = get_token(code, callback_url)
+    token = get_token code
     data = get_user token
-    pams = (process_userdata data).to_query
+    @user = data
+    #pams = (process_userdata data).to_query
     #redirect_to "#{callback_url}?#{pams}"
-    @user = "#{@@callback_url}?#{pams}"
+    #@user = "#{@@callback_url}?#{pams}"
   end
 
   private
-  def get_token(code, callback_url)
-    redir_uri = get_request_uri callback_url
+  def get_token(code)
+    redir_uri = @@redirect_uri
     url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{redir_uri}"
     token = DevController.makeHttpsGetRequest url
     token[token.index("access_token")+13, token.index("expires")-2]
@@ -44,11 +45,6 @@ class FacebookController < ApplicationController
         :picture_url => data['avatar_url'],
         :facebook_url => data['html_url']
     }
-  end
-
-  def get_request_uri(callback_url)
-    @@redirect_uri + "?callback_url=#{callback_url}"
-    #@@redirect_uri
   end
 
 end
