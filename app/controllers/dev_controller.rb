@@ -2,19 +2,21 @@ class DevController < ApplicationController
 	@@app_id = 191338297661848
 	@@app_secret = "e218f0abdb012a0fc8c49e135b8af61d"
 	@@fb_redirect_url = "http://launchp.herokuapp.com/dev/resp"
+	
+	# TODO: BIG todo
+	@@callback_url = "http://launchp.herokuapp.com/dev/userCallback"
 
 	def resp
 		code = params[:code]
-		callback_url = params[:callback_url]
-		puts "Website callback: #{callback_url}"
-		#TODO: validation (code) and (callback_url)
+		#call = params[:callback_url]
+		#TODO: validation (code)
 
 		# Exchange code for an access token
-		redir_uri = getFbRedirectUri callback_url
+		redir_uri = getFbRedirectUri call
 		url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{redir_uri}"
 		token = makeHttpsGetRequest url
-		
-		puts token
+
+    puts token
 		
 		token = token[token.index("access_token")+13, token.index("expires")-2]
 		#TODO: validation (token)
@@ -22,14 +24,17 @@ class DevController < ApplicationController
 		# Get stuff about the user
 		url = "https://graph.facebook.com/me?access_token=#{token}"
 		data = makeHttpsGetRequest url
-		@result = processUserData data
+		res = processUserData data
+		redirect_to("#{@@callback_url}?" + res.to_query)
 	end
 	
 	# Redirect to Facebook sign up/in page with our credentials.
 	# Reponse url: our url to handle Facebook's callback
 	def facebook
-		redir_uri = getFbRedirectUri params[:return_url]
-		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}"
+		#call = params[:return_url]
+		redir_uri = getFbRedirectUri call
+		scope = "email"
+		url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{scope}"
 		redirect_to url
 	end
 	
@@ -40,9 +45,8 @@ class DevController < ApplicationController
 	def userCallback
 	
 	end
-	
-	private
-	def makeHttpsGetRequest(url)
+
+	def self.makeHttpsGetRequest(url)
 		require 'net/https'
 		require 'net/http'
 		require 'uri'
@@ -54,16 +58,30 @@ class DevController < ApplicationController
 
 		request = Net::HTTP::Get.new(uri.request_uri)
 		http.request(request).body
-	end
-	
-	private
-	def processUserData(data)
+  end
+
+  def self.makeHttpsPostRequest(url)
+    require 'net/http'
+    require 'net/https'
+    require 'uri'
+
+    uri = URI.parse url
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+    request = Net::HTTP::Post.new(uri.path)
+    http.request(request).body
+  end
+
+
+  def processUserData(data)
 		require 'json'
 		json = JSON.parse data
-		json["name"]
+		
+		{ :name => json["name"], :email => json["email"]}
 	end
 	
-	private
 	def getFbRedirectUri(callback_url)
 		#@@fb_redirect_url + "?callback_url=#{callback_url}"
 		@@fb_redirect_url

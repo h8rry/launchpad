@@ -1,8 +1,10 @@
 Launchpad::Application.routes.draw do
-
   resources :users
 
   get "dev/resp"
+
+  get "github/index"
+  get "github/resp"
   
   # Redirect only
   get "dev/facebook"
