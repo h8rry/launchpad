@@ -1,29 +1,15 @@
 <script type="text/javascript">
-
-
-
   $('document').ready(function(){
-  	var arr = ["Twitter", "Github", "LinkedIn", "Google", "Facebook"];
-  	var i = 0;
-  	setInterval(function() {
-  			var e = $('#name');
-      
-      		e.html('<div class="changing_field">' + arr[i++] + '</div>' )
-
-      		i = i % 5;
-
-	}, 4000); 
-
+        var arr = ["Twitter", "GitHub", "LinkedIn", "Google", "Facebook"];
+        var i = 0;
+        setInterval(function() {
+            $('#name').html('<div class="changing_field">' + arr[i++] + '</div>' )
+            i %= 5;
+        }, 4000);
   });
-
 </script>
 
 <style>
- /**
- * Typing animation with pure CSS
- * Revised. Browser support (as of Feb 2012): Firefox, IE10
- */
-
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
@@ -41,10 +27,10 @@
 </style>
 	
 <div class="hero-unit">
-	    	<img src="http://imgur.com/ifkeavV.gif" class="rocket" width="130" />
+    <img src="http://imgur.com/ifkeavV.gif" class="rocket" width="130" />
 
 
-	<h1 style="font-size:80px; text-align:center;"> Launch Pad</h1>
+	<h1 style="font-size:80px; text-align:center;">Launch Pad</h1>
 
 	<br>
 	<br>
@@ -65,12 +51,12 @@
 
 <span class="span5">
 
-<pre class="prettyprint linenums" style="width:500px;"><ol class="linenums"><li class="L0"><span class="tag">&lt;body</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"lol"</span><span class="tag">&gt;</span><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"../assets/launchpad.js" </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="tag">&lt;/script</span><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><li><span>	launchpad("lol", "http://www.callback_to_your_site.com");</span></li><span class="tag">&lt;/script</span><span class="tag">&gt;</span></li ><li class="L0"><span class="tag">&lt;/body</span><span class="tag">&gt;</span></li></ol></pre>
+    <pre class="prettyprint linenums" style="width:500px;"><ol class="linenums"><li class="L0"><span class="tag">&lt;body</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"lol"</span><span class="tag">&gt;</span><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"../assets/launchpad.js" </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="tag">&lt;/script</span><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><li><span>	launchpad("lol", "http://www.callback_to_your_site.com");</span></li><span class="tag">&lt;/script</span><span class="tag">&gt;</span></li ><li class="L0"><span class="tag">&lt;/body</span><span class="tag">&gt;</span></li></ol></pre>
 
 </span>
 
 <span class="span5">
-<div id="lol"></div>
+    <div id="lol"></div>
 </span>
 
 <script src="../assets/launchpad.js" type="text/javascript"></script>
