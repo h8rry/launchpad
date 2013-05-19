@@ -6,7 +6,7 @@ class GithubController < ApplicationController
   @@scope = "user"
 
   def index
-    url = "https://github.com/login/oauth/authorize?client_id=#{@@client_id}&@@redirect_uri=#{@@redirect_uri}&scope=#{@@scope}"
+    url = "https://github.com/login/oauth/authorize?client_id=#{@@client_id}&redirect_uri=#{@@redirect_uri}&scope=#{@@scope}"
     redirect_to url
   end
 
@@ -24,8 +24,8 @@ class GithubController < ApplicationController
   end
 
   def getToken(code)
-    url = "https://github.com/login/oauth/access_token?client_id=#{@@client_id}&client_secret=#{@@client_secret}&@@redirect_uri=#{@@redirect_uri}&code=#{code}"
-    DevController.makeHttpsPostRequest url
+    url = "https://github.com/login/oauth/access_token?client_id=#{@@client_id}&client_secret=#{@@client_secret}&redirect_uri=#{@@redirect_uri}&code=#{code}"
+    DevController.makeHttpsGetRequest url
   end
 
   def getUser(token)
