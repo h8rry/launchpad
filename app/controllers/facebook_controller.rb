@@ -10,7 +10,7 @@ class FacebookController < ApplicationController
   @@callback_url = "http://launchp.herokuapp.com/dev/userCallback"
 
   def index
-    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{@@redirect_uri}"
+    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{@@redirect_uri}&scope=#{@@scope}"
     redirect_to url
   end
 
