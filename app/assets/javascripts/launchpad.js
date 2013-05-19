@@ -6,7 +6,7 @@ var launchpad = (function () {
   };
   
   function init(element) {
-	var callbackUrl = "http://localhost:3000/dev/userCallback";
+	var callbackUrl = "http://launchp.herokuapp.com/dev/userCallback";
   
 	var wrapper = $('<div/>').addClass('launchpad-wrapper'),
 		header = $('<div/>').addClass('launchpad-header'),
@@ -22,7 +22,7 @@ var launchpad = (function () {
 		
 
 	fbButton.on('click', function() {
-		window.location = 'http://localhost:3000/dev/facebook?return_url=' + callbackUrl;
+		window.location = 'http://launchp.herokuapp.com/dev/facebook?return_url=' + callbackUrl;
 	});
 
 	twButton.on('click', function() {

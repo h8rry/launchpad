@@ -1577,3 +1577,10 @@ Served asset /launchpad.js - 304 Not Modified (0ms)
 
 Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-18 20:02:12 -0700
 Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/dev/facebook?return_url=http://localhost:3000/dev/userCallback" for 127.0.0.1 at 2013-05-18 20:12:16 -0700
+Processing by DevController#facebook as HTML
+  Parameters: {"return_url"=>"http://localhost:3000/dev/userCallback"}
+Redirected to https://www.facebook.com/dialog/oauth?client_id=191338297661848&redirect_uri=http://launchp.herokuapp.com/dev/resp
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
