@@ -10,6 +10,15 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+
+
+#lol{
+  margin-left:300px;
+  border-style: solid;
+  border-width: 5px;  
+  width: 240px;
+}
+
 .hero-unit{
  
 }
@@ -20,20 +29,20 @@
   top: 20px;
 }
 
+.img-polaroid{
+  height: 200px;
+}
+
 .img-circle{
   height: 120px;
 }
 
 .launchpad-body button{
-    display:block;
+    
 }
 
 .launchpad-facebook{
-  color:transparent;
-  background: url("http://www.aicadvocates.org/images/logo_facebook.png") no-repeat center;
-  background-size: 80px 80px;
-  height:80px;
-  width:80px;
+  
 }
 .progress progress-info progress-striped, {
   background-color: #5bc0de;

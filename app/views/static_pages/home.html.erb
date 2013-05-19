@@ -67,7 +67,7 @@
 
 </div>
 
-<div class="hero-unit" style="margin-left:75px; width:850px; height: 2000px; position: relative;">
+<div class="hero-unit" style="margin-left:75px; width:850px; height: 1900px; position: relative;">
 
 <h1 style="font-size:60px; text-align:center;">Launchpad API</h1>	
 
@@ -117,7 +117,7 @@ You will only add a few lines of codes in your HTML page to implement our API.
 
 <pre class="prettyprint linenums" style="width:auto;"><ol class="linenums"><li class="L0"><span class="tag">&lt;body</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"lol"</span><span class="tag">&gt;</span><span class="tag">&lt;/div</span><span class="tag">&gt;</span></li><li class="L0"><span class="tag">...</span></li><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"../assets/launchpad.js" </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="tag">&lt;/script</span><li class="L0"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><li><span>	launchpad("lol", "http://www.callback_to_your_site.com");</span></li><span class="tag">&lt;/script</span><span class="tag">&gt;</span></li ><li class="L0"><span class="tag">&lt;/body</span><span class="tag">&gt;</span></li></ol></pre>
 
-<h1 style="font-size:20px; text-align:left;">If Oauth is <span style="color:rgb(255,63,0);">Successful</span></h1>
+<h1 style="font-size:30px; text-align:left;">If Oauth is <span style="color:rgb(255,63,0);">Successful</span></h1>
 
 you will receive the following in your callback site: <span style="border-bottom:1px solid black;">name, email, picture_url, and one of: facebook_url, github_url, linkedin_url
 </span>.
@@ -130,8 +130,36 @@ Example Callback:
 {"github_url"=>"https://github.com/harrychenca", "name"=>"", "picture_url"=>"https://secure.gravatar.com/avatar/7ea106aaa5d3ab18c6f088b1f0012ada?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png", "controller"=>"dev", "action"=>"userCallback"}
 </code>
 
-<h1 style="font-size:20px; text-align:left;">If Oauth is <span style="color:rgb(255,63,0);">Not successful</span>:</h1>
+<h1 style="font-size:30px; text-align:left;">If Oauth is <span style="color:rgb(255,63,0);">Not successful</span>:</h1>
 You will receive an error message in your callback site.
+
+<h1 style="font-size:30px; text-align:left;">You can modify the look using CSS! Here are some examples: </h1>
+
+	<img src="http://janrain.com/wp-content/uploads/2013/02/SocialLogin.png" class="img-polaroid">
+	<img src="http://main.makeuseoflimited.netdna-cdn.com/wp-content/uploads/2010/12/08d-Login-With-Existing-Account.jpg" class="img-polaroid">
+	<img src="http://1.bp.blogspot.com/-F7zO_Yb1l04/ToOSbVOibEI/AAAAAAAAAMA/l8nAOdOFbAo/s1600/Social+Media.jpg" class="img-polaroid">
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<h1 style="text-align:center; font-size:30px;color:rgb(255,63,0);">
+		Thank you! This was created by 
+
+		<a href="mailto:bekt17@gmail.com">Kanat Bekt</a>
+
+		and 
+
+		<%= link_to "Harry Chen", "http://www.facebook.com/harrychenca" %> 
+
+		during 
+
+		<%= link_to "AngelHack Seattle", "http://www.angelhack.com" %> 
+	</h1>
+
+    <img src="http://imgur.com/ifkeavV.gif" style="margin-left:350px;" width="130" />
 
 
 </div>
