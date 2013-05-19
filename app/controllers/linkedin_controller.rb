@@ -41,7 +41,6 @@ class LinkedinController < ApplicationController
   def process_userdata(data)
     json = JSON.parse data
     data = json['person']
-    puts data
 
     model = {
         :name => "#{data['first_name']} #{data['last_name']}",
