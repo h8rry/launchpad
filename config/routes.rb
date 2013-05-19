@@ -5,6 +5,8 @@ Launchpad::Application.routes.draw do
   get "dev/index"
   
   get "dev/resp"
+  
+  get "dev/disp"
  
   root to: "static_pages#home"
 
