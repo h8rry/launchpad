@@ -29,8 +29,8 @@ class FacebookController < ApplicationController
     url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&redirect_uri=#{redir_uri}&code=#{code}"
     token = DevController.makeHttpsGetRequest url
 
-    put token 
-    
+    puts token 
+
     token[token.index("access_token")+13, token.index("expires")-2]
   end
 
