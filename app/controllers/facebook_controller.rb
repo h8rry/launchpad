@@ -13,7 +13,7 @@ class FacebookController < ApplicationController
 
     puts redir_uri
 
-    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{@@scope}"
+    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&scope=#{@@scope}&redirect_uri=#{redir_uri}"
     
     puts url
 
