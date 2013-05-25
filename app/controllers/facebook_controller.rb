@@ -8,12 +8,12 @@ class FacebookController < ApplicationController
 
 
   def index
-    callback_url = params[:return_url]
-    redir_uri = get_request_uri callback_url
+    callback_url = params[:return_url] #what is this?
+    state = callback_url
 
-    puts redir_uri
+    puts state
 
-    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&scope=#{@@scope}&redirect_uri=#{redir_uri}"
+    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&scope=#{@@scope}&redirect_uri=#{redir_uri}&state=#{state}"
     
     puts url
 
@@ -22,7 +22,7 @@ class FacebookController < ApplicationController
 
   def resp
     code = params[:code]
-    callback_url = params[:callback_url]
+    callback_url = params[:state]
     token = getToken(code, callback_url)
     data = get_user token
     pams = (process_userdata data).to_query
@@ -38,7 +38,7 @@ class FacebookController < ApplicationController
     url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&redirect_uri=#{redir_uri}&code=#{code}"
 
     puts url
-    
+
     token = DevController.makeHttpsGetRequest url
 
     puts token 
