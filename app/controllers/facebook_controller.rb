@@ -36,6 +36,9 @@ class FacebookController < ApplicationController
     puts redir_uri
 
     url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&redirect_uri=#{redir_uri}&code=#{code}"
+
+    puts url
+    
     token = DevController.makeHttpsGetRequest url
 
     puts token 
