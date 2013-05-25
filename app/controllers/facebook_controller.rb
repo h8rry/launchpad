@@ -9,7 +9,7 @@ class FacebookController < ApplicationController
 
   def index
     callback_url = params[:return_url]
-    redir_uri = get_request_uri callback_url
+    redir_uri = callback_url
     url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{@@redirect_uri}&scope=#{@@scope}"
     redirect_to url
   end
