@@ -24,8 +24,8 @@ class FacebookController < ApplicationController
   end
 
   private
-  def get_token(code)
-    redir_uri = @@redirect_uri
+  def getToken(code, callback_url)
+    redir_uri = get_request_uri callback_url
     url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&code=#{code}&redirect_uri=#{redir_uri}"
     token = DevController.makeHttpsGetRequest url
     token[token.index("access_token")+13, token.index("expires")-2]
