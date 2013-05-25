@@ -8,12 +8,12 @@ class FacebookController < ApplicationController
 
 
   def index
-    callback_url = params[:return_url] #what is this?
+    callback_url = params[:return_url]
     state = callback_url
 
     puts state
 
-    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&scope=#{@@scope}&redirect_uri=#{redir_uri}&state=#{state}"
+    url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&scope=#{@@scope}&redirect_uri=#{@@redirect_uri}&state=#{state}"
     
     puts url
 
