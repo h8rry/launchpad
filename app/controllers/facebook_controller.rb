@@ -31,11 +31,8 @@ class FacebookController < ApplicationController
 
   private
   def getToken(code, callback_url)
-    redir_uri = get_request_uri callback_url
-
-    puts redir_uri
-
-    url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&redirect_uri=#{redir_uri}&code=#{code}"
+  
+    url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&redirect_uri=#{@@redirect_uri}&code=#{code}&state=#{callback_url}"
 
     puts url
 
