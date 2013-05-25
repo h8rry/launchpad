@@ -10,6 +10,9 @@ class FacebookController < ApplicationController
   def index
     callback_url = params[:return_url]
     redir_uri = get_request_uri callback_url
+
+    puts redir_uri
+
     url = "https://www.facebook.com/dialog/oauth?client_id=#{@@app_id}&redirect_uri=#{redir_uri}&scope=#{@@scope}"
     redirect_to url
   end
@@ -26,6 +29,9 @@ class FacebookController < ApplicationController
   private
   def getToken(code, callback_url)
     redir_uri = get_request_uri callback_url
+
+    puts redir_uri
+    
     url = "https://graph.facebook.com/oauth/access_token?client_id=#{@@app_id}&client_secret=#{@@app_secret}&redirect_uri=#{redir_uri}&code=#{code}"
     token = DevController.makeHttpsGetRequest url
 
